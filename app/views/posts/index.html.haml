@@ -12,29 +12,32 @@
       .body__headerright__groupmember--title
         sample
       .body__headerright__groupmember--member
-        Member:seo neko
+        Member:seo neko
     .body__headerright--edit
       Edit
   .body__left
     .body__left--name
       sample
     .body__left--text
-      Good bye world
+      Good bye world
   .body__main
     .body__main__nametime
       .body__main__nametime--name
-        seo 
+        seo 
       .body__main__nametime--time
-        2016/01/21 09:32:41
+        2016/01/21 09:32:41
     .body__main--comment
-      Hello world!
+      Hello world!
     .body__main__footer
       .body__main__footer__message
+        
         .body__main__footer__message--typeamessage
-          type a message
-        %label.body__main__footer__message--img
-          = fa_icon 'image'
-          %input.icon{:type=>"file",:name=>"image"}
+          type a message 
+        .body__main__footer__message--img
+          %a{:href => ".."}
+            =fa_icon 'image'
       .body__main__footer--send
         Send
+
+
 

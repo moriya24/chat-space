@@ -84,31 +84,31 @@
     
   &__main{
     width:calc(100vw-300px);
-    float:left;
     background-color:#fafafa;
     height:100vh;
-    padding-right:345px;
-    
     &__nametime{
-      padding:150px 0px 10px 40px;
+      padding-top: 150px;
+      margin-left: 340px;
       &--name{
       font-size:16px;
       font-weight:bold;
       color:#434A54;
-      float: left;
+      float:left;
+      margin-right: 10px;
       }
       &--time{
       font-size:12px;
       color:#999999;
-      float: left;
+      
       }
     }
       &--comment{
-      font-size:14px;
-      flood-color:#434A54;
-      padding:0px 0px 40px 40px;
-      clear: both;
+        font-size:14px;
+        flood-color:#434A54;
+        margin-left: 340px;
+        padding-top: 14px;
       }
+    
   
     &__footer{
       height:90px;
@@ -116,25 +116,36 @@
       width:100%;
       padding:20px 40px 20px 40px;
       position:fixed;
-      margin-left:0px;
+      margin-left:300px;
       background-color:#ddd;
+      display:flex;
       &__message{
-      width:350px;
-      background-color:#fff;
-      line-height:50px;
-      top:50%;
-      margin-top:20px;
-      float:left;
-      display: flex;
-        &--typeamessage{
-        font-size:15px;
-        flood-color:#434A54;
-        float:left;
+        width:100%;
+        background-color:#fff;
+        line-height:50px;
+        margin-top:20px;
+        margin-right: 500px;
+        bottom:40px;
         height:50px;
-        padding-right: 200px;
+        display: flex;
+        justify-content: space-between;
+        padding-right:10px;
+        &--typeamessage{
+          font-size:15px;
+          flood-color:#434A54;
+          float:left;
+          height:50px;
+          width:calc(100%-30px);
+          text-align: left;
         }            
         &--img{
-          right: 10px;
+          height:fit-content;
+          width:fit-content;
+          float:right;
+          margin-right:10px;
+        }
+        .icon{
+          display:none;
         }
       }
       &--send{
@@ -143,7 +154,6 @@
         height:50px;
         width:108px;
         position:fixed;
-        float:right;
         right:40px;
         text-align:center;
         line-height:50px;

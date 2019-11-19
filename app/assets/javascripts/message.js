@@ -59,26 +59,26 @@ $(function(){
   created_url=url1.replace("messages",'api/messages');
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $(".message").last().data("messages_id");
-    var buildMessageHTML = function(message) {
+  //   var buildMessageHTML = function(message) {
       
-    var image=message.image!= null ? `<img class="lower-message__image" src="${message.image}">`:""
-    var html=`<div class="message" data-messages_id="${message.id}">
-                <div class="upper-message">
-                  <div class="upper-message__user-name">
-                    ${message.name}
-                  </div>
-                  <div class="upper-message__date">
-                  ${message.created_at}
-                  </div>
-                </div>
-                <div class="lower-message">
-                  <p class="lower-message__content">
-                  ${message.content}
-                  </p>
-                  ${image}
-                </div>`
-    return html;
-  }
+  //   var image=message.image!= null ? `<img class="lower-message__image" src="${message.image}">`:""
+  //   var html=`<div class="message" data-messages_id="${message.id}">
+  //               <div class="upper-message">
+  //                 <div class="upper-message__user-name">
+  //                   ${message.name}
+  //                 </div>
+  //                 <div class="upper-message__date">
+  //                 ${message.created_at}
+  //                 </div>
+  //               </div>
+  //               <div class="lower-message">
+  //                 <p class="lower-message__content">
+  //                 ${message.content}
+  //                 </p>
+  //                 ${image}
+  //               </div>`
+  //   return html;
+  // }
      
    
     $.ajax({
@@ -96,7 +96,7 @@ $(function(){
       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
       for (var i=0; i<messages.length;i++){
       //メッセージが入ったHTMLを取得
-        part_html=part_html+buildMessageHTML(messages[i]);
+        part_html=part_html+buildMessage(messages[i]);
       //メッセージを追加
       
         $('.messages').append(part_html);

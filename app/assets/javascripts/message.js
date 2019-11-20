@@ -51,10 +51,9 @@ $(function(){
     })
 
   });
-  if(document.URL.match(/messages/)){
 
   var reloadMessages = function() {
-      
+    
   url1=location.href;
   created_url=url1.replace("messages",'api/messages');
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -78,15 +77,19 @@ $(function(){
       //メッセージが入ったHTMLを取得
         part_html=part_html+buildMessage(messages[i]);
       //メッセージを追加
-      
+      if (part_html!=null) {
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      }
         $('.messages').append(part_html);
       }
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      
+
     })
     .fail(function() {
       alert("fail");
     });
   }
+  if(document.URL.match(/messages/)){
   setInterval(reloadMessages, 7000);
  }
  

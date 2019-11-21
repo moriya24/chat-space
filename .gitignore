@@ -18,3 +18,4 @@
 public/uploads/*
 group-materials/
 user-materials/
+config/secrets.yml
